@@ -1,0 +1,18 @@
+﻿[
+  {
+    "outputFile": "Content/AdminBSB/css/style.css",
+    "inputFile": "Content/AdminBSB/scss/style.scss"
+  },
+  {
+    "outputFile": "Content/css/pages/login.css",
+    "inputFile": "Content/scss/pages/login.scss"
+  },
+  {
+    "outputFile": "Content/AdminBSB/css/themes/_all-themes.css",
+    "inputFile": "Content/AdminBSB/scss/themes/_all-themes.scss"
+  },
+  {
+    "outputFile": "Content/css/layout.css",
+    "inputFile": "Content/scss/layout.scss"
+  }
+]

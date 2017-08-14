@@ -1,0 +1,14 @@
+[
+  {
+    "outputFileName": "Content/AdminBSB/js/admin.min.js",
+    "inputFiles": [
+      "Content/AdminBSB/js/admin.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/js/layout.min.js",
+    "inputFiles": [
+      "Content/js/layout.js"
+    ]
+  }
+]
