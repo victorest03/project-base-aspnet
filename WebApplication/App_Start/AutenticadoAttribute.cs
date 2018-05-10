@@ -1,6 +1,5 @@
 ﻿using System.Web.Mvc;
 using System.Web.Routing;
-using BusinessLogic;
 using Common.Session;
 
 namespace WebApplication
@@ -14,8 +13,8 @@ namespace WebApplication
             if (SessionHelper.ExistUserInSession()) return;
             if (SessionHelper.ExistCookieSession())
             {
-                var user = new UsuarioBl().Buscar(int.Parse(SessionHelper.GetCookie()));
-                SessionHelper.AddUserToSession(user);
+                //var user = new UsuarioBl().Buscar(int.Parse(SessionHelper.GetCookie()));
+                //SessionHelper.AddUserToSession(user);
             }
             else
             {
@@ -39,9 +38,9 @@ namespace WebApplication
 
             if (!SessionHelper.ExistCookieSession()) return;
 
-            var user = new UsuarioBl().Buscar(int.Parse(SessionHelper.GetCookie()));
+            //var user = new UsuarioBl().Buscar(int.Parse(SessionHelper.GetCookie()));
 
-            SessionHelper.AddUserToSession(user);
+            //SessionHelper.AddUserToSession(user);
 
             filterContext.Result = new RedirectToRouteResult(new RouteValueDictionary(new
             {

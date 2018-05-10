@@ -1,14 +1,8 @@
 [
   {
-    "outputFileName": "Content/AdminBSB/js/admin.min.js",
+    "outputFileName": "Content/js/Shared/_Layout.min.js",
     "inputFiles": [
-      "Content/AdminBSB/js/admin.js"
-    ]
-  },
-  {
-    "outputFileName": "Content/js/layout.min.js",
-    "inputFiles": [
-      "Content/js/layout.js"
+      "Content/js/Shared/_Layout.js"
     ]
   }
 ]

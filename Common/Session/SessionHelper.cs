@@ -16,14 +16,14 @@ namespace Common.Session
             var sesionName = ConfigurationManager.AppSettings["SesionName"];
             var userCookieName = ConfigurationManager.AppSettings["UserCookieName"];
             var userCookieKey = ConfigurationManager.AppSettings["UserCookieKey"];
-            SesionName = string.IsNullOrWhiteSpace(sesionName) ? sesionName : "DefaultSessionName";
-            UserCookieName = string.IsNullOrWhiteSpace(userCookieName) ? userCookieName : "DefaultUserCookieName";
-            UserCookieKey = string.IsNullOrWhiteSpace(userCookieKey) ? userCookieKey : "DefaultUserCookieKey";
+            SesionName = !string.IsNullOrWhiteSpace(sesionName) ? sesionName : "DefaultSessionName";
+            UserCookieName = !string.IsNullOrWhiteSpace(userCookieName) ? userCookieName : "DefaultUserCookieName";
+            UserCookieKey = !string.IsNullOrWhiteSpace(userCookieKey) ? userCookieKey : "DefaultUserCookieKey";
         }
 
         public static void DestroyUserSessionAndCookie()
         {
-            HttpContext.Current.Session[SesionName] = null;
+            HttpContext.Current.Session.Clear();
             var userCookieName = HttpContext.Current.Request.Cookies[UserCookieName];
 
             if (userCookieName == null) return;
@@ -66,7 +66,5 @@ namespace Common.Session
             var userCookieName = HttpContext.Current.Request.Cookies[UserCookieName];
             return userCookieName?.Values[UserCookieKey].Decrypt();
         }
-
-
     }
 }

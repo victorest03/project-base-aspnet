@@ -1,5 +1,5 @@
-﻿
-using System.Text.RegularExpressions;
+﻿using Common.Methods;
+using System.Net.Mail;
 
 namespace Common.Extensions
 {
@@ -12,30 +12,28 @@ namespace Common.Extensions
         /// <returns>true o false</returns>
         public static bool IsFormatEmail(this string value)
         {
-            const string sFormato = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
-
-            if (string.IsNullOrEmpty(value))
-                return false;
-
-            if (Regex.IsMatch(value, sFormato))
-                return Regex.Replace(value, sFormato, string.Empty).Length == 0;
-
-            return false;
+            try { return new MailAddress(value).Address == value; }
+            catch { return false; }
         }
 
-        /// <summary>Comprobar si Cadena cuenta con la estructura de un Telefono</summary>
-        /// <param name="value">Cadena que se validara</param>
-        /// <returns>true o false</returns>
-        public static bool IsFormatTelephone(this string value)
+        /// <summary>
+        /// Comprobar si Cadena cuenta con la estructura de un E-mail
+        /// </summary>
+        /// <param name="value">Cadena que se Encriptara</param>
+        /// <returns>Cadena Encriptara</returns>
+        public static string Encryptor(this string value)
         {
-            const string sFormato = "^(?!0+$)(\\+\\d{0,}[- ]?)?(?!0+$)\\d{1,}$";
-            if (string.IsNullOrEmpty(value))
-                return false;
+            return new EncryptorString().Encryptor(value);
+        }
 
-            if (Regex.IsMatch(value, sFormato))
-                return Regex.Replace(value, sFormato, string.Empty).Length == 0;
-
-            return false;
+        /// <summary>
+        /// Comprobar si Cadena cuenta con la estructura de un E-mail
+        /// </summary>
+        /// <param name="value">Cadena que se Desencriptada</param>
+        /// <returns>Cadena Desencriptada</returns>
+        public static string Decrypt(this string value)
+        {
+            return new EncryptorString().Decrypt(value);
         }
     }
 }

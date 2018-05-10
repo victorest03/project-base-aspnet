@@ -7,15 +7,15 @@ namespace Common.Methods
     public static class GeneratePassword
     {
         // Define default min and max password lengths.
-        private static readonly int DEFAULT_MIN_PASSWORD_LENGTH = 8;
-        private static readonly int DEFAULT_MAX_PASSWORD_LENGTH = 10;
+        private const int DefaultMinPasswordLength = 8;
+        private const int DefaultMaxPasswordLength = 10;
 
         // Define supported password characters divided into groups.
         // You can add (or remove) characters to (from) these groups.
-        private static string PASSWORD_CHARS_LCASE = "abcdefgijkmnopqrstwxyz";
-        private static string PASSWORD_CHARS_UCASE = "ABCDEFGHJKLMNPQRSTWXYZ";
-        private static string PASSWORD_CHARS_NUMERIC = "23456789";
-        private static string PASSWORD_CHARS_SPECIAL = "*$-+?_&=!%{}/";
+        private const string PasswordCharsLcase = "abcdefgijkmnopqrstwxyz";
+        private const string PasswordCharsUcase = "ABCDEFGHJKLMNPQRSTWXYZ";
+        private const string PasswordCharsNumeric = "23456789";
+        private const string PasswordCharsSpecial = "*$-+?_&=!%{}/";
 
         /// <summary>
         /// Generates a random password.
@@ -30,8 +30,8 @@ namespace Common.Methods
         /// </remarks>
         public static string Generate()
         {
-            return Generate(DEFAULT_MIN_PASSWORD_LENGTH,
-                DEFAULT_MAX_PASSWORD_LENGTH);
+            return Generate(DefaultMinPasswordLength,
+                DefaultMaxPasswordLength);
         }
 
         /// <summary>
@@ -75,27 +75,27 @@ namespace Common.Methods
             // Create a local array containing supported password characters
             // grouped by types. You can remove character groups from this
             // array, but doing so will weaken the password strength.
-            char[][] charGroups = new char[][]
+            var charGroups = new char[][]
             {
-                PASSWORD_CHARS_LCASE.ToCharArray(),
-                PASSWORD_CHARS_UCASE.ToCharArray(),
-                PASSWORD_CHARS_NUMERIC.ToCharArray(),
-                PASSWORD_CHARS_SPECIAL.ToCharArray()
+                PasswordCharsLcase.ToCharArray(),
+                PasswordCharsUcase.ToCharArray(),
+                PasswordCharsNumeric.ToCharArray(),
+                PasswordCharsSpecial.ToCharArray()
             };
 
             // Use this array to track the number of unused characters in each
             // character group.
-            int[] charsLeftInGroup = new int[charGroups.Length];
+            var charsLeftInGroup = new int[charGroups.Length];
 
             // Initially, all characters in each group are not used.
-            for (int i = 0; i < charsLeftInGroup.Length; i++)
+            for (var i = 0; i < charsLeftInGroup.Length; i++)
                 charsLeftInGroup[i] = charGroups[i].Length;
 
             // Use this array to track (iterate through) unused character groups.
-            int[] leftGroupsOrder = new int[charGroups.Length];
+            var leftGroupsOrder = new int[charGroups.Length];
 
             // Initially, all character groups are not used.
-            for (int i = 0; i < leftGroupsOrder.Length; i++)
+            for (var i = 0; i < leftGroupsOrder.Length; i++)
                 leftGroupsOrder[i] = i;
 
             // Because we cannot use the default randomizer, which is based on the
@@ -105,17 +105,17 @@ namespace Common.Methods
 
             // Use a 4-byte array to fill it with random bytes and convert it then
             // to an integer value.
-            byte[] randomBytes = new byte[4];
+            var randomBytes = new byte[4];
 
             // Generate 4 random bytes.
-            RNGCryptoServiceProvider rng = new RNGCryptoServiceProvider();
+            var rng = new RNGCryptoServiceProvider();
             rng.GetBytes(randomBytes);
 
             // Convert 4 bytes into a 32-bit integer value.
-            int seed = BitConverter.ToInt32(randomBytes, 0);
+            var seed = BitConverter.ToInt32(randomBytes, 0);
 
             // Now, this is real randomization.
-            Random random = new Random(seed);
+            var random = new Random(seed);
 
             // This array will hold password characters.
 
