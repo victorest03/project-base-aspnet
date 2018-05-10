@@ -1,14 +1,14 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{BC738BF5-9B5B-43BB-AE00-F7902A8DC499}</ProjectGuid>
+    <ProjectGuid>{CD93D771-38C7-41ED-94F9-4A1F57C46ACB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DataAccess</RootNamespace>
-    <AssemblyName>DataAccess</AssemblyName>
+    <RootNamespace>BaseProject.BusinessLogic</RootNamespace>
+    <AssemblyName>BaseProject.BusinessLogic</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -46,13 +46,17 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Common\Common.csproj">
+    <ProjectReference Include="..\BaseProject.Common\BaseProject.Common.csproj">
       <Project>{8b03bab3-24cd-4a64-aa7b-ec356569e69b}</Project>
-      <Name>Common</Name>
+      <Name>BaseProject.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Entity\Entity.csproj">
+    <ProjectReference Include="..\BaseProject.DataAccess\BaseProject.DataAccess.csproj">
+      <Project>{bc738bf5-9b5b-43bb-ae00-f7902a8dc499}</Project>
+      <Name>BaseProject.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BaseProject.Entity\BaseProject.Entity.csproj">
       <Project>{bb0db435-baaa-4e3c-9edc-a1be0084eb87}</Project>
-      <Name>Entity</Name>
+      <Name>BaseProject.Entity</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

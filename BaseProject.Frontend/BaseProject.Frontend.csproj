@@ -1,4 +1,4 @@
-﻿<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="..\packages\Microsoft.Net.Compilers.2.8.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.8.0\build\Microsoft.Net.Compilers.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
@@ -12,8 +12,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WebApplication</RootNamespace>
-    <AssemblyName>WebApplication</AssemblyName>
+    <RootNamespace>BaseProject.Frontend</RootNamespace>
+    <AssemblyName>BaseProject.Frontend</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -149,17 +149,17 @@
     <Folder Include="Views\Home\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BusinessLogic\BusinessLogic.csproj">
+    <ProjectReference Include="..\BaseProject.BusinessLogic\BaseProject.BusinessLogic.csproj">
       <Project>{cd93d771-38c7-41ed-94f9-4a1f57c46acb}</Project>
-      <Name>BusinessLogic</Name>
+      <Name>BaseProject.BusinessLogic</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Common\Common.csproj">
+    <ProjectReference Include="..\BaseProject.Common\BaseProject.Common.csproj">
       <Project>{8b03bab3-24cd-4a64-aa7b-ec356569e69b}</Project>
-      <Name>Common</Name>
+      <Name>BaseProject.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Entity\Entity.csproj">
+    <ProjectReference Include="..\BaseProject.Entity\BaseProject.Entity.csproj">
       <Project>{bb0db435-baaa-4e3c-9edc-a1be0084eb87}</Project>
-      <Name>Entity</Name>
+      <Name>BaseProject.Entity</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

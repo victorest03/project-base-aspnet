@@ -1,17 +1,17 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entity", "Entity\Entity.csproj", "{BB0DB435-BAAA-4E3C-9EDC-A1BE0084EB87}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseProject.Entity", "BaseProject.Entity\BaseProject.Entity.csproj", "{BB0DB435-BAAA-4E3C-9EDC-A1BE0084EB87}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLogic", "BusinessLogic\BusinessLogic.csproj", "{CD93D771-38C7-41ED-94F9-4A1F57C46ACB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseProject.BusinessLogic", "BaseProject.BusinessLogic\BaseProject.BusinessLogic.csproj", "{CD93D771-38C7-41ED-94F9-4A1F57C46ACB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{BC738BF5-9B5B-43BB-AE00-F7902A8DC499}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseProject.DataAccess", "BaseProject.DataAccess\BaseProject.DataAccess.csproj", "{BC738BF5-9B5B-43BB-AE00-F7902A8DC499}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication", "WebApplication\WebApplication.csproj", "{694B243D-CE7E-42DA-A76B-704A2F4CDCDA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseProject.Frontend", "BaseProject.Frontend\BaseProject.Frontend.csproj", "{694B243D-CE7E-42DA-A76B-704A2F4CDCDA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{8B03BAB3-24CD-4A64-AA7B-EC356569E69B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseProject.Common", "BaseProject.Common\BaseProject.Common.csproj", "{8B03BAB3-24CD-4A64-AA7B-EC356569E69B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
