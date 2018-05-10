@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -103,6 +103,7 @@
     <Compile Include="Extensions\StringExtension.cs" />
     <Compile Include="Methods\DbConnection.cs" />
     <Compile Include="Methods\GeneratePassword.cs" />
+    <Compile Include="Methods\ReaderMapping.cs" />
     <Compile Include="Model\Auditoria.cs" />
     <Compile Include="Model\Error.cs" />
     <Compile Include="Model\Parameter.cs" />
