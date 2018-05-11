@@ -1,8 +1,8 @@
 ﻿using System.Web.Mvc;
 using System.Web.Routing;
-using Common.Session;
+using BaseProject.Common.Session;
 
-namespace WebApplication
+namespace BaseProject.Frontend
 {
     public class AutenticadoAttribute : ActionFilterAttribute
     {

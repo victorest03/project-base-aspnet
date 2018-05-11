@@ -4,9 +4,9 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Transactions;
-using Common.Model;
+using BaseProject.Common.Model;
 
-namespace Common.Methods
+namespace BaseProject.Common.Methods
 {
     public static class DbConnection
     {

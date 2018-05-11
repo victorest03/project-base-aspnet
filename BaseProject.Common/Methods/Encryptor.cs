@@ -4,7 +4,7 @@ using System.Security.Cryptography;
 using System.Text;
 using Microsoft.IdentityModel.Tokens;
 
-namespace Common.Methods
+namespace BaseProject.Common.Methods
 {
     /// <summary>
     /// Contiene metodos que encriptan un string mediante contraseña  

@@ -1,4 +1,4 @@
-﻿namespace Common.Model
+﻿namespace BaseProject.Common.Model
 {
     public class Error
     {

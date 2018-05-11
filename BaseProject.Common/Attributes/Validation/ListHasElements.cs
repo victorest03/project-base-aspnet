@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.ComponentModel.DataAnnotations;
 
-namespace Common.Attributes.Validation
+namespace BaseProject.Common.Attributes.Validation
 {
     public class ListHasElements : ValidationAttribute
     {

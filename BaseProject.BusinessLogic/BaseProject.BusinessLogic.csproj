@@ -54,9 +54,9 @@
       <Project>{bc738bf5-9b5b-43bb-ae00-f7902a8dc499}</Project>
       <Name>BaseProject.DataAccess</Name>
     </ProjectReference>
-    <ProjectReference Include="..\BaseProject.Entity\BaseProject.Entity.csproj">
+    <ProjectReference Include="..\BaseProject.Model\BaseProject.Model.csproj">
       <Project>{bb0db435-baaa-4e3c-9edc-a1be0084eb87}</Project>
-      <Name>BaseProject.Entity</Name>
+      <Name>BaseProject.Model</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
