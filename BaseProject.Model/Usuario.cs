@@ -1,8 +1,9 @@
-﻿using FluentValidation;
+﻿using BaseProject.Model.Persistence;
+using FluentValidation;
 
 namespace BaseProject.Model
 {
-    public class Usuario
+    public class Usuario : BaseEntity
     {
         public int pkUsuario { get; set; }
         public string cUsuario { get; set; }

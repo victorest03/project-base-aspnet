@@ -104,6 +104,7 @@
     <Compile Include="Methods\GeneratePassword.cs" />
     <Compile Include="Methods\ReaderMapping.cs" />
     <Compile Include="Model\Auditoria.cs" />
+    <Compile Include="Model\BaseEntity.cs" />
     <Compile Include="Model\Error.cs" />
     <Compile Include="Model\Parameter.cs" />
     <Compile Include="Model\Result.cs" />
