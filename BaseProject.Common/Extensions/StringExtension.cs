@@ -1,7 +1,7 @@
-﻿using Common.Methods;
-using System.Net.Mail;
+﻿using System.Net.Mail;
+using BaseProject.Common.Methods;
 
-namespace Common.Extensions
+namespace BaseProject.Common.Extensions
 {
     public static class StringExtension
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Common.Extensions
+namespace BaseProject.Common.Extensions
 {
     public static class DateTimeExtension
     {

@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
-using Common.Model;
+using BaseProject.Common.Model;
 
-namespace Common.Extensions
+namespace BaseProject.Common.Extensions
 {
     public static class ModelStateExtension
     {

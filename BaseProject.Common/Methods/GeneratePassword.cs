@@ -1,8 +1,7 @@
-﻿
-using System;
+﻿using System;
 using System.Security.Cryptography;
 
-namespace Common.Methods
+namespace BaseProject.Common.Methods
 {
     public static class GeneratePassword
     {

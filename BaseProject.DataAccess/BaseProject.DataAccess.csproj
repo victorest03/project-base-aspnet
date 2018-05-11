@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -60,9 +60,9 @@
       <Project>{8b03bab3-24cd-4a64-aa7b-ec356569e69b}</Project>
       <Name>BaseProject.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\BaseProject.Entity\BaseProject.Entity.csproj">
+    <ProjectReference Include="..\BaseProject.Model\BaseProject.Model.csproj">
       <Project>{bb0db435-baaa-4e3c-9edc-a1be0084eb87}</Project>
-      <Name>BaseProject.Entity</Name>
+      <Name>BaseProject.Model</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

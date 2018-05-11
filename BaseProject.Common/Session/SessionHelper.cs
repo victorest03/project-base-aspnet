@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Configuration;
 using System.Web;
-using Common.Extensions;
+using BaseProject.Common.Extensions;
 
-namespace Common.Session
+namespace BaseProject.Common.Session
 {
     public static class SessionHelper
     {

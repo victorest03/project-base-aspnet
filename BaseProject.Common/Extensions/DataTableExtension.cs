@@ -1,7 +1,7 @@
 ﻿using System.Data;
 using System.Linq;
 
-namespace Common.Extensions
+namespace BaseProject.Common.Extensions
 {
     public static class DataTableExtension
     {

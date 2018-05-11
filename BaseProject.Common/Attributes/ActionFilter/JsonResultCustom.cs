@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Web.Mvc;
 using Newtonsoft.Json;
-namespace Common.Attributes.ActionFilter
+
+namespace BaseProject.Common.Attributes.ActionFilter
 {
     public class JsonResultCustom : ActionFilterAttribute
     {

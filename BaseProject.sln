@@ -1,9 +1,8 @@
-
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseProject.Entity", "BaseProject.Entity\BaseProject.Entity.csproj", "{BB0DB435-BAAA-4E3C-9EDC-A1BE0084EB87}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseProject.Model", "BaseProject.Model\BaseProject.Model.csproj", "{BB0DB435-BAAA-4E3C-9EDC-A1BE0084EB87}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseProject.BusinessLogic", "BaseProject.BusinessLogic\BaseProject.BusinessLogic.csproj", "{CD93D771-38C7-41ED-94F9-4A1F57C46ACB}"
 EndProject
