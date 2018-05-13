@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Configuration;
 using System.Web;
+using System.Web.Mvc;
 using BaseProject.Common.Extensions;
 
 namespace BaseProject.Common.Session
@@ -67,4 +68,12 @@ namespace BaseProject.Common.Session
             return userCookieName?.Values[UserCookieKey].Decrypt();
         }
     }
+
+    public class BaseController: Controller
+    {
+        private object _usuario;
+
+        public TEntity GetUser<TEntity>() where TEntity : class => (TEntity)_usuario ?? (TEntity)(_usuario = SessionHelper.GetUser());
+    }
+
 }

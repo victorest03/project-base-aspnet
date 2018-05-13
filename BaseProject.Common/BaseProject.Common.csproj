@@ -95,7 +95,6 @@
     <Compile Include="Attributes\Validation\ListHasElements.cs" />
     <Compile Include="Extensions\DataTableExtension.cs" />
     <Compile Include="Extensions\DateTimeExtension.cs" />
-    <Compile Include="Interface\IRepository.cs" />
     <Compile Include="Methods\Encryptor.cs" />
     <Compile Include="Extensions\ListExtension.cs" />
     <Compile Include="Extensions\ModelStateExtension.cs" />
