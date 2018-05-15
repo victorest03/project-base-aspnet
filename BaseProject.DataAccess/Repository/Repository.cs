@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Linq.Expressions;
 using BaseProject.Common.Model;
-using BaseProject.Model.Persistence;
 using NLog;
 using NPoco;
 
 namespace BaseProject.DataAccess.Repository
 {
-    public class Repository<TEntity> where TEntity : class
+    public abstract class Repository<TEntity> where TEntity : class
     {
         public static readonly Logger Logger = LogManager.GetCurrentClassLogger();
         public virtual List<TEntity> GetAll()
@@ -20,7 +20,7 @@ namespace BaseProject.DataAccess.Repository
                 using (IDatabase db = DbContext.GetInstance())
                 {
                     #region Select All
-                    result = db.Fetch<TEntity>("where isDelete = 1");
+                    result = db.Fetch<TEntity>("where isDelete != 1");
                     #endregion
                 }
             }
@@ -81,7 +81,17 @@ namespace BaseProject.DataAccess.Repository
             {
                 using (IDatabase db = DbContext.GetInstance())
                 {
-                    db.Update(new BaseEntity {isDelete = true, fFechaEdita = DateTime.UtcNow}, id,new []{ "isDelete", "fFechaEdita" });
+                    var entity = Get(id) as BaseEntity;
+                    if (entity != null)
+                    {
+                        entity.fFechaEdita = DateTime.UtcNow;
+                        entity.isDelete = true;
+                        db.Update(entity, id, new[] { "isDelete", "fFechaEdita" });
+                    }
+                    else
+                    {
+                        return new Result { Message = "Registro no encontrado!!!" };
+                    }
                 }
 
                 result.Success = true;
@@ -102,6 +112,10 @@ namespace BaseProject.DataAccess.Repository
             {
                 using (IDatabase db = DbContext.GetInstance())
                 {
+                    var castEntity = entity as BaseEntity;
+                    castEntity.fFechaCrea = DateTime.UtcNow;
+                    castEntity.fFechaEdita = null;
+                    castEntity.fkUsuarioEdita = null;
                     db.Insert(entity);
                 }
 
@@ -123,7 +137,10 @@ namespace BaseProject.DataAccess.Repository
             {
                 using (IDatabase db = DbContext.GetInstance())
                 {
-                    db.Update(entity);
+                    var castEntity = entity as BaseEntity;
+                    castEntity.fFechaEdita = DateTime.UtcNow;
+
+                    db.Update(entity, entity.GetType().GetProperties().Select(s => s.Name).Where(w => w != "fkUsuarioCrea" && w != "fFechaCrea").ToArray());
                 }
 
                 result.Success = true;

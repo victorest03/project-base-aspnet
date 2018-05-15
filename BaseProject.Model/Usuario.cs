@@ -1,4 +1,4 @@
-﻿using BaseProject.Model.Persistence;
+﻿using BaseProject.Common.Model;
 using FluentValidation;
 
 namespace BaseProject.Model
